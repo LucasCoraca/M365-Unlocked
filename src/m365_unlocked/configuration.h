@@ -1,0 +1,3 @@
+/*
+This file allows you to set the default configuration of the board
+*/
