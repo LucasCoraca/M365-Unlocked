@@ -23,7 +23,7 @@ This file store the pins values;
 #define BRAKE_PIN A3;
 
 //Action Button pin
-#define ACTIONB_PIN A1;
+#define ACTIONB_PIN A2;
 
 //Battery pin;
 #define BATTERY_PIN A1;
