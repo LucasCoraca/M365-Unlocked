@@ -38,5 +38,5 @@ No data should be collected
 * strong motor brake
 * better uphill performance  
 
-##License
+## License
 All software is licensed under GNU GPL 3.0 and all hardware is licensed under CERN OHL v1.2.
