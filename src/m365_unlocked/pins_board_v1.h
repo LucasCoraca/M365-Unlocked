@@ -19,8 +19,11 @@ This file store the pins values;
 //Throttle pins
 #define THROTTLE_PIN A4;
 
-//Breake pins
+//Brake pins
 #define BRAKE_PIN A3;
+
+//Action Button pin
+#define ACTIONB_PIN A1;
 
 //Battery pin;
 #define BATTERY_PIN A1;
