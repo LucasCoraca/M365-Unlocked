@@ -1,11 +1,12 @@
 ## ActionButton Class
 
-This class is responsible to handle action button functionality
-it is able to detect single and double button press.
+This class is responsible to handle action button functionality.
+
+It is able to detect single and double button presses.
 
 ## How it works
 
-After the first button is pressed it starts counting time, if the button is
+After the button is pressed for the first time a timer is started, if the button is
 pressed more than once it adds to a counter.
 
 If the button is not pressed for more than 500 milliseconds then the timer and
