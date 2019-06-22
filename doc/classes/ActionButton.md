@@ -32,6 +32,10 @@ void reset()
 
 * reset timer and counter to default values
 
+void updateState()
+
+* update button state (not(0), single(1) or double pressed(2))
+
 bool isSinglePressed()
 
 * returns true if button is single pressed
