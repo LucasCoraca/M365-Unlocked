@@ -19,14 +19,25 @@ GNU GPLv3 license
 
 #include "pins_board_v1.h"
 #include "configuration.h"
+#include "ActionButton.h"
+
+ActionButton actionButton = ActionButton::ActionButton(ACTIONB_PIN);
 
 
 void setup() {
-  // put your setup code here, to run once:
-
+  Serial.begin(9600);
+  pinMode(13, OUTPUT);
+  digitalWrite(13,LOW);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
+  actionButton.loop();
+  if(actionButton.isSinglePressed()){
+      digitalWrite(13,HIGH);
+      Serial.println("s");
+    }
+  if(actionButton.isDoublePressed()){
+      digitalWrite(13,LOW);
+      Serial.println("d");
+    }
 }

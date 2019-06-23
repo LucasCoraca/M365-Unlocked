@@ -21,9 +21,9 @@ updated once the 500 milliseconds is over.
 
 ![alt text](https://github.com/LucasCoraca/M365-Unlocked/blob/master/doc/classes/ActionButtonClass.png)
 
-long timer
+long timer_micros
 
-* counts the time
+* timer cycle start time in microseconds
 
 int counter
 
@@ -41,17 +41,13 @@ bool bState
 
 * stores the button status from last loop cycle
 
-void setup()
-
-* setup pin mode on arduino start
-
 void loop()
 
-* handles ActionButton logic
+* handles ActionButton behavior
 
 void reset()
 
-* reset timer and counter to default values
+* reset elapsedTime
 
 void updateState()
 
@@ -64,3 +60,11 @@ bool isSinglePressed()
 bool isDoublePressed()
 
 * returns true if double pressed
+
+calculateElapsedTime()
+
+* calculates elapsed time
+
+updateTimer()
+
+* update timer to the current micros() time
