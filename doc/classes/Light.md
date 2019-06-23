@@ -9,6 +9,8 @@ ActionButton class
 ## How it works
 
 If action button is single pressed check Light
-status and reverse it
+status and reverse it.
 
 # Class diagram
+
+a
