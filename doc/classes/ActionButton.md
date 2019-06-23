@@ -21,9 +21,13 @@ updated once the 500 milliseconds is over.
 
 ![alt text](https://github.com/LucasCoraca/M365-Unlocked/blob/master/doc/classes/ActionButtonClass.png)
 
-long timer_micros
+unsigned long timer_micros
 
 * timer cycle start time in microseconds
+
+unsigned long elapsedTime_micros
+
+* actual elapsed time since the first button press.
 
 int counter
 
