@@ -15,6 +15,12 @@ GNU GPLv3 license
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
  contact:lucascoracasilva@gmail.com
+
+ ActionButton v1
+
+ for more info refer to:
+ https://github.com/LucasCoraca/M365-Unlocked/blob/master/doc/classes/ActionButto
+ n.md
 */
 
 class ActionButton {
