@@ -11,6 +11,6 @@ ActionButton class
 If action button is single pressed check Light
 status and reverse it.
 
-# Class diagram
+## Class diagram
 
 a
