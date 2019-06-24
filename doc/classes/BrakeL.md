@@ -13,10 +13,11 @@ If the brake is pressed blink
 
 It must preserve the state it was before the brake was pressed
 
+![alt text](https://github.com/LucasCoraca/M365-Unlocked/blob/master/doc/classes/BrakeL.png)
+
 ## Class Diagram
 
-![alt text](https://github.com/LucasCoraca/M365-Unlocked/blob/master/doc/classes
-/BrakeLClass.png)
+![alt text](https://github.com/LucasCoraca/M365-Unlocked/blob/master/doc/classes/BrakeLClass.png)
 
 Brake brake
 
