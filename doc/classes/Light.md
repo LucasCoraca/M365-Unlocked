@@ -8,9 +8,24 @@ ActionButton class
 
 ## How it works
 
-If action button is single pressed check Light
-status and reverse it.
+If action button is single pressed toggle Light.
 
 ## Class diagram
 
-a
+![alt text](https://github.com/LucasCoraca/M365-Unlocked/blob/master/doc/classes/LightClass.png)
+
+ActionButton actionButton
+
+* active ActionButton instance
+
+pin
+
+* light pin
+
+loop()
+
+* handle Light logic
+
+toggle()
+
+* toggle light;
