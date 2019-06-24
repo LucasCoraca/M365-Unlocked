@@ -7,8 +7,7 @@ TODO make it work with analog signals (used by the hall effect sensor on the
 
 ## Class diagram
 
-![alt text](https://github.com/LucasCoraca/M365-Unlocked/blob/master/doc/classes
-/BrakeClass.png)
+![alt text](https://github.com/LucasCoraca/M365-Unlocked/blob/master/doc/classes/BrakeClass.png)
 
 int pin
 
