@@ -17,19 +17,13 @@ GNU GPLv3 license
  contact:lucascoracasilva@gmail.com
 */
 
-class ActionButton;
-class PowerMode{
 
-private:
-    int mode;
-    int maxSpeed;
-    int maxPower;
-    ActionButton *actionButton;
+class Battery{
+
+  private:
+    int pin;
 
   public:
-    PowerMode(ActionButton *ab);
-    void loop();
-    int getPowerMode();
-    int getMaxSpeed();
-    int getMaxPower();
+    Battery(int bPin);
+    float getVoltage();
 };

@@ -16,20 +16,16 @@ GNU GPLv3 license
 
  contact:lucascoracasilva@gmail.com
 */
+#include "Throttle.h"
+#include "configuration.h"
+#include "Arduino.h"
 
-class ActionButton;
-class PowerMode{
 
-private:
-    int mode;
-    int maxSpeed;
-    int maxPower;
-    ActionButton *actionButton;
 
-  public:
-    PowerMode(ActionButton *ab);
-    void loop();
-    int getPowerMode();
-    int getMaxSpeed();
-    int getMaxPower();
-};
+Throttle::Throttle(int tPin){
+  pin = tPin;
+}
+
+int getThrttolePercentage(){
+  return (analogRead(A2) - BRAKE_MIN) * (0- 100) / (BRAKE_MAX - BRAKE_MIN) + 0;
+}

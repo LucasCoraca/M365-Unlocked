@@ -39,7 +39,7 @@ void BrakeL::loop(){
   if(actionButton->isSinglePressed()){
     toggle();
   }
-  if(brake->isBraking()){
+  if(brake->getBrakePercentage()){
     calculateElapsedTime();
     if(bState == false){
       bState = true;

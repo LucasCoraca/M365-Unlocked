@@ -17,9 +17,8 @@ GNU GPLv3 license
  contact:lucascoracasilva@gmail.com
 */
 
-//TODO make it work with analog signals
-
 #include "Arduino.h"
+#include "configuration.h"
 #include "Brake.h"
 
 Brake::Brake(int bPin){
@@ -27,11 +26,6 @@ Brake::Brake(int bPin){
   pinMode(pin, INPUT);
 }
 
-void Brake::loop(){
-
-
-}
-
-bool Brake::isBraking(){
-  return digitalRead(pin);
+int Brake::getBrakePercentage(){
+  return (analogRead(A2) - BRAKE_MIN) * (0- 100) / (BRAKE_MAX - BRAKE_MIN) + 0;
 }

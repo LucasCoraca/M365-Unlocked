@@ -17,19 +17,12 @@ GNU GPLv3 license
  contact:lucascoracasilva@gmail.com
 */
 
-class ActionButton;
-class PowerMode{
+class Throttle{
 
-private:
-    int mode;
-    int maxSpeed;
-    int maxPower;
-    ActionButton *actionButton;
+  private:
+    int pin;
 
   public:
-    PowerMode(ActionButton *ab);
-    void loop();
-    int getPowerMode();
-    int getMaxSpeed();
-    int getMaxPower();
+    Throttle(int tPin);
+    int getThrottlePercentage();
 };

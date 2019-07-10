@@ -16,20 +16,13 @@ GNU GPLv3 license
 
  contact:lucascoracasilva@gmail.com
 */
+#include "Battery.h"
+#include "Arduino.h"
 
-class ActionButton;
-class PowerMode{
+Battery::Battery(int bPin){
+    pin = bPin;
+}
 
-private:
-    int mode;
-    int maxSpeed;
-    int maxPower;
-    ActionButton *actionButton;
-
-  public:
-    PowerMode(ActionButton *ab);
-    void loop();
-    int getPowerMode();
-    int getMaxSpeed();
-    int getMaxPower();
-};
+float Battery::getVoltage(){
+  return (analogRead(pin) - 0) * (111.383 - 0) / (1023 - 0) + 0;
+}
