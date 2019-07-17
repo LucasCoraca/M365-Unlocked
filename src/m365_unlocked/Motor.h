@@ -21,18 +21,57 @@ class Battery;
 class Throttle;
 class Brake;
 class PowerMode;
+class Coil;
 
 class Motor{
 
   private:
+
+    //dependencies
+    Throttle *throttle;
+    Brake *brake;
+    PowerMode *powerMode;
+    Battery *battery;
+
+    //Coils
+    Coil *coilA;
+    Coil *coilB;
+    Coil *coilC;
+
+    //hall sensors pins
+    int sensorA;
+    int sensorB;
+    int sensorC;
+
+    //main variables
+    unsigned long timer_micros;
+    unsigned long elapsedTime_micros;
     int rpm;
-    int fase;
+    int speed_kmh;
     int power;
-    int targetSpeed;
+    int targetSpeed_kmh;
+
+    //fase functions
+    void setFase1();
+    void setFase2();
+    void setFase3();
+    void setFase4();
+    void setFase5();
+    void setFase6();
+    void setOff();
+
+    //main functions
+    void accelerate();
+    void brakeM();
+    void updateTargetSpeed();
+    void updateTargetPower();
+    void calculateSpeed();
+
 
   public:
-    Motor();
+    Motor(int aVcc,int aGnd,int bVcc,int bGnd,int cVcc,int cGnd,int sA,int sB,
+      int sC, Throttle *t, Brake *bK, PowerMode *pM, Battery *bT);
     int getSpeed();
-
+    void loop();
 
 };

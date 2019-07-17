@@ -21,17 +21,17 @@ GNU GPLv3 license
 
 
 //Motor pins
-#define MOTOR1_H_PIN 7
-#define MOTOR2_H_PIN 5
-#define MOTOR3_H_PIN 3
-#define MOTOR1_L_PIN 6
-#define MOTOR2_L_PIN 4
-#define MOTOR3_L_PIN 2
+#define MOTORA_VCC_PIN 7
+#define MOTORB_VCC_PIN 5
+#define MOTORC_VCC_PIN 3
+#define MOTORA_GND_PIN 6
+#define MOTORB_GND_PIN 4
+#define MOTORC_GND_PIN 2
 
 //Motor Hall sensors pins
-#define MOTOR_HALL1_PIN A7
-#define MOTOR_HALL2_PIN A6
-#define MOTOR_HALL3_PIN A5
+#define MOTOR_HALLA_PIN A7
+#define MOTOR_HALLB_PIN A6
+#define MOTOR_HALLC_PIN A5
 
 //Throttle pins
 #define THROTTLE_PIN A4

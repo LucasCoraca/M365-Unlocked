@@ -26,7 +26,7 @@ GNU GPLv3 license
 #include "PowerMode.h"
 #include "Battery.h"
 #include "Throttle.h"
-//#include "Motor.h"
+#include "Motor.h"
 
 ActionButton *actionButton;
 Light *frontLight;
@@ -35,7 +35,7 @@ BrakeL *brakeL;
 PowerMode *powerMode;
 Battery *battery;
 Throttle *throttle;
-//Motor *motor;
+Motor *motor;
 
 void setup()
 {
@@ -46,8 +46,21 @@ void setup()
   battery = new Battery(BATTERY_PIN);
   throttle = new Throttle(THROTTLE_PIN);
   frontLight = new Light(FRONT_LIGHT_PIN, actionButton);
-  //  motor = new Motor();
-  Serial.begin(9600);
+  motor = new Motor(
+    MOTORA_VCC_PIN,
+    MOTORA_GND_PIN,
+    MOTORB_VCC_PIN,
+    MOTORB_GND_PIN,
+    MOTORC_VCC_PIN,
+    MOTORC_GND_PIN,
+    MOTOR_HALLA_PIN,
+    MOTOR_HALLB_PIN,
+    MOTOR_HALLC_PIN,
+    throttle,
+    brake,
+    powerMode,
+    battery
+  );
 }
 
 void loop()
@@ -56,6 +69,5 @@ void loop()
   powerMode->loop();
   brakeL->loop();
   frontLight->loop();
-  Serial.println(battery->getVoltage());
-
+  motor->loop();
 }
